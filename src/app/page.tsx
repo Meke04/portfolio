@@ -7,7 +7,7 @@ import { SlSocialGithub, SlSocialInstagram, SlSocialLinkedin } from "react-icons
 
 export default function Home() {
   return (
-    <main className="flex flex-1 text-white p-10">
+    <main className="flex flex-1 text-white px-10 py-4">
 
 
       <div className="flex flex-col w-2/5">
@@ -234,6 +234,11 @@ export default function Home() {
         </div>
 
         <h1 className="text-2xl">Projetos:</h1>
+
+        <div className="flex pt-4 gap-2">
+          <Link href="/enki" className="bg-purple-600 hover:bg-purple-800 py-1 px-1.5 text-2xl">Enki</Link>
+          <Link href="https://transportadora-naty.vercel.app/" target="_blank" rel="noopener noreferrer" className="bg-blue-500 hover:bg-blue-700 py-1 px-1.5 text-2xl">NSF Transportadora</Link>
+        </div>
       </div>
 
 
