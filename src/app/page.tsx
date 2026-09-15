@@ -60,10 +60,10 @@ export default function Home() {
         <div className="flex flex-col xl:flex-row">
           <div className="flex flex-col w-full gap-4 xl:w-2/4">
 
-            <h1 className="text-2xl font-bold">Olá, Bem vindo(a) ao meu portfolio</h1>
-            <h1 className="text-xl">Me chamo Luis Filipe Silva, sou estudante de engenharia mecanica pela UFV e estudante full stack java pela EBAC, gosto de passar meu tempo tentando passar ideias diferentes para codigos</h1>
-            <h1 className="text-xl">Atualmente aprimorando meus conhecimentos e habilidades na conexão entre Front-end e Back-end</h1>
-            <h1 className="text-md">Quer entrar com econtato comigo? Segue abaixo os meus meios de contato.</h1>
+            <h1 className="text-2xl font-bold">Olá! Bem-vindo(a) ao meu portfólio.</h1>
+            <h1 className="text-xl">Me chamo Luis Filipe Silva, sou estudante de Engenharia Mecânica pela UFV e estudante de Full Stack Java pela EBAC. Gosto de passar meu tempo transformando ideias diferentes em código.</h1>
+            <h1 className="text-xl">Atualmente, aprimorando meus conhecimentos e habilidades na integração entre Front-end e Back-end.</h1>
+            <h1 className="text-md">Quer entrar em contato comigo? Seguem abaixo os meus meios de contato.</h1>
 
             <div className="flex flex-wrap gap-2">
               <Link href="https://mail.google.com/mail/?view=cm&fs=1&to=luismekedev@gmail.com&su=Contato&body=Olá,%20gostaria%20de%20entrar%20em%20contato." target="_blank" rel="noopener noreferrer" className="flex items-center">
@@ -157,7 +157,7 @@ export default function Home() {
 
         <h1 className="text-2xl">Projetos:</h1>
 
-        <div className="flex pt-4 gap-2">
+        <div className="flex flex-wrap pt-4 gap-2">
 
           <Link href="/enki" className="relative rounded-2xl border border-gray-200 overflow-hidden">
 
@@ -165,7 +165,7 @@ export default function Home() {
 
             <div className="absolute -inset-full rounded-2xl bg-[conic-gradient(from_180deg,transparent_0deg,transparent_300deg,#a855f7_360deg)] animate-[spin_4s_linear_infinite] "/>
 
-            <div className="flex flex-col relative m-0.5 p-2 rounded-2xl bg-black gap-3">
+            <div className="flex flex-col relative m-px p-2 rounded-2xl bg-black gap-3">
               <div className="flex items-center gap-1">
                 <Image src="/LogoEnki.png" alt="Logo Enki" width={42} height={42} priority className="drop-shadow-[0_0_18px_rgba(124,58,237,0.35)]" />
                 <h1 className="bg-linear-to-r from-white via-violet-300 to-sky-400 bg-clip-text text-2xl font-bold tracking-wide text-transparent" > ENKI </h1>
@@ -182,7 +182,7 @@ export default function Home() {
 
             <div className="absolute -inset-full rounded-2xl bg-[conic-gradient(from_180deg,transparent_0deg,transparent_300deg,#22c55e_360deg)] animate-[spin_4s_linear_infinite] "/>
 
-            <div className="flex flex-col relative m-0.5 p-2 rounded-2xl bg-black gap-3">
+            <div className="flex flex-col relative m-px p-2 rounded-2xl bg-black gap-3">
               <div className="flex items-center gap-1">
                 <Image
                   src="/LogoHDI.png"
@@ -193,7 +193,7 @@ export default function Home() {
                 />
               </div>
               <p className="text-xl">Um site criado para uma transportadora<br/> de cargas diversas.</p>
-              <p className="hover:underline">clique para saber mais.</p>
+              <p className="hover:underline">Clique para saber mais.</p>
             </div>
 
           </Link>
