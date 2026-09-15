@@ -56,7 +56,7 @@ export default function Home() {
       </div>
 
 
-      <div className="flex flex-col border border-gray-400 p-4 lg:p-8 xl:w-8/10">
+      <div className="flex flex-col border border-gray-400 rounded-xl p-4 lg:p-8 xl:w-8/10">
         <div className="flex flex-col xl:flex-row">
           <div className="flex flex-col w-full gap-4 xl:w-2/4">
 
@@ -89,7 +89,7 @@ export default function Home() {
 
           <div className="hidden xl:block w-2/4 pl-20">
             <Link href="https://storyset.com/technology">
-              <Image src="/foto1.png" alt="foto1" height={1000} width={1000} className="h-90 w-90" />
+              <Image src="/foto1.png" alt="foto1" loading="eager" height={1000} width={1000} className="h-90 w-90" />
             </Link>
           </div>
         </div>
@@ -158,8 +158,47 @@ export default function Home() {
         <h1 className="text-2xl">Projetos:</h1>
 
         <div className="flex pt-4 gap-2">
-          <Link href="/enki" className="bg-purple-600 hover:bg-purple-800 py-1 px-1.5 text-2xl">Enki</Link>
-          <Link href="https://transportadora-naty.vercel.app/" target="_blank" rel="noopener noreferrer" className="bg-blue-500 hover:bg-blue-700 py-1 px-1.5 text-2xl">NSF Transportadora</Link>
+
+          <Link href="/enki" className="relative rounded-2xl border border-gray-200 overflow-hidden">
+
+            <div className="absolute -inset-full rounded-2xl bg-[conic-gradient(transparent_0deg,transparent_300deg,#a855f7_360deg)] animate-[spin_4s_linear_infinite] "/>
+
+            <div className="absolute -inset-full rounded-2xl bg-[conic-gradient(from_180deg,transparent_0deg,transparent_300deg,#a855f7_360deg)] animate-[spin_4s_linear_infinite] "/>
+
+            <div className="flex flex-col relative m-0.5 p-2 rounded-2xl bg-black gap-3">
+              <div className="flex items-center gap-1">
+                <Image src="/LogoEnki.png" alt="Logo Enki" width={42} height={42} priority className="drop-shadow-[0_0_18px_rgba(124,58,237,0.35)]" />
+                <h1 className="bg-linear-to-r from-white via-violet-300 to-sky-400 bg-clip-text text-2xl font-bold tracking-wide text-transparent" > ENKI </h1>
+              </div>
+              <p className="text-xl">Um site criado pare a remoção<br/> de fundos de imagens.</p>
+              <p className="hover:underline">clique para saber mais.</p>
+            </div>
+
+          </Link>
+
+          <Link href="https://transportadora-naty.vercel.app/" target="_blank" rel="noopener noreferrer" className="relative rounded-2xl border border-gray-200 overflow-hidden">
+
+            <div className="absolute -inset-full rounded-2xl bg-[conic-gradient(transparent_0deg,transparent_300deg,#22c55e_360deg)] animate-[spin_4s_linear_infinite] "/>
+
+            <div className="absolute -inset-full rounded-2xl bg-[conic-gradient(from_180deg,transparent_0deg,transparent_300deg,#22c55e_360deg)] animate-[spin_4s_linear_infinite] "/>
+
+            <div className="flex flex-col relative m-0.5 p-2 rounded-2xl bg-black gap-3">
+              <div className="flex items-center gap-1">
+                <Image
+                  src="/LogoHDI.png"
+                  alt="Logo"
+                  width={42}
+                  height={42}
+                  className=""
+                />
+              </div>
+              <p className="text-xl">Um site criado para uma transportadora<br/> de cargas diversas.</p>
+              <p className="hover:underline">clique para saber mais.</p>
+            </div>
+
+          </Link>
+          
+
         </div>
       </div>
 
