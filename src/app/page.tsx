@@ -176,7 +176,7 @@ export default function Home() {
 
           </Link>
 
-          <Link href="https://transportadora-naty.vercel.app/" target="_blank" rel="noopener noreferrer" className="relative rounded-2xl border border-gray-200 overflow-hidden">
+          <Link href="https://msflogistica.com.br/" target="_blank" rel="noopener noreferrer" className="relative rounded-2xl border border-gray-200 overflow-hidden">
 
             <div className="absolute -inset-full rounded-2xl bg-[conic-gradient(transparent_0deg,transparent_300deg,#22c55e_360deg)] animate-[spin_4s_linear_infinite] "/>
 
@@ -206,3 +206,5 @@ export default function Home() {
     </main>
   );
 }
+
+
