@@ -12,7 +12,7 @@ export default function Home() {
 
 
       <div className="flex flex-col w-full items-center min-w-90 xl:w-2/10">
-        <div className="flex pl-10">
+        <div className="flex lg:pl-10">
           <div className="w-70 h-70 border-2 rounded-full overflow-hidden">
             <Image src="/perfil.jpeg" alt="perfil" loading="eager" width={200} height={200} className="w-full h-full object-cover"/>
           </div>
@@ -87,7 +87,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="hidden xl:block w-2/4 pl-20">
+          <div className="hidden xl:block w-2/4 pl-20 2xl:pl-40">
             <Link href="https://storyset.com/technology">
               <Image src="/foto1.png" alt="foto1" loading="eager" height={1000} width={1000} className="h-90 w-90" />
             </Link>
