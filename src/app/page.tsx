@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { DiVisualstudio } from "react-icons/di";
-import { FaJava, FaLinkedin, FaWhatsapp } from "react-icons/fa";
+import { FaClipboardList, FaJava, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import { SiCss, SiDocker, SiGit, SiGithub, SiGmail, SiHtml5, SiIntellijidea, SiJavascript, SiMysql, SiNextdotjs, SiNodedotjs, SiPostgresql, SiReact, SiTailwindcss, SiTypescript } from "react-icons/si";
 import { SlSocialGithub, SlSocialInstagram, SlSocialLinkedin } from "react-icons/sl";
 import BoxLink from "../components/BoxLinks";
@@ -167,7 +167,7 @@ export default function Home() {
 
             <div className="flex flex-col relative m-px p-2 rounded-2xl bg-black gap-3">
               <div className="flex items-center gap-1">
-                <Image src="/LogoEnki.png" alt="Logo Enki" width={42} height={42} priority className="drop-shadow-[0_0_18px_rgba(124,58,237,0.35)]" />
+                <Image src="/LogoEnki.png" alt="Logo Enki" width={42} height={42} className="w-10.5 h-10.5 drop-shadow-[0_0_18px_rgba(124,58,237,0.35)]" />
                 <h1 className="bg-linear-to-r from-white via-violet-300 to-sky-400 bg-clip-text text-2xl font-bold tracking-wide text-transparent" > ENKI </h1>
               </div>
               <p className="text-xl">Um site criado pare a remoção<br/> de fundos de imagens.</p>
@@ -176,7 +176,7 @@ export default function Home() {
 
           </Link>
 
-          <Link href="/msflogistica" target="_blank" rel="noopener noreferrer" className="relative rounded-2xl border border-gray-200 overflow-hidden">
+          <Link href="/msflogistica" className="relative rounded-2xl border border-gray-200 overflow-hidden">
 
             <div className="absolute -inset-full rounded-2xl bg-[conic-gradient(transparent_0deg,transparent_300deg,#22c55e_360deg)] animate-[spin_4s_linear_infinite] "/>
 
@@ -184,15 +184,25 @@ export default function Home() {
 
             <div className="flex flex-col relative m-px p-2 rounded-2xl bg-black gap-3">
               <div className="flex items-center gap-1">
-                <Image
-                  src="/LogoHDI.png"
-                  alt="Logo"
-                  width={42}
-                  height={42}
-                  className=""
-                />
+                <Image src="/LogoHDI.png" alt="Logo" width={42} height={42} className="w-10.5 h-10.5" />
               </div>
               <p className="text-xl">Um site criado para uma transportadora<br/> de cargas diversas.</p>
+              <p className="hover:underline">Clique para saber mais.</p>
+            </div>
+
+          </Link>
+
+          <Link href="/lista" className="relative rounded-2xl border border-gray-200 overflow-hidden">
+
+            <div className="absolute -inset-full rounded-2xl bg-[conic-gradient(transparent_0deg,transparent_300deg,#9C3525_360deg)] animate-[spin_4s_linear_infinite] "/>
+
+            <div className="absolute -inset-full rounded-2xl bg-[conic-gradient(from_180deg,transparent_0deg,transparent_300deg,#9C3525_360deg)] animate-[spin_4s_linear_infinite] "/>
+
+            <div className="flex flex-col relative m-px p-2 rounded-2xl bg-black gap-3">
+              <div className="flex items-center gap-1">
+                <FaClipboardList className="w-10.5 h-10.5"/>
+              </div>
+              <p className="text-xl">Uma atividade desenvolvida durante<br/> meu curso de Front-End na EBAC.</p>
               <p className="hover:underline">Clique para saber mais.</p>
             </div>
 
