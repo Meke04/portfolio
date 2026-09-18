@@ -25,19 +25,19 @@ export default function enki() {
                 <div className="flex flex-col w-full xl:w-1/2 gap-4">
 
                     <div className="flex pt-4 xl:p-10">
-                        <Image src="/site1image1.png" alt="image1" width={1917} height={947} className="w-auto h-auto"/>
+                        <Image src="/site1image1.png" alt="image1" loading="eager" width={1917} height={947} className="w-auto h-auto"/>
                     </div>
 
                     <div className="flex xl:p-10">
-                        <Image src="/site1image2.png" alt="image1" width={1917} height={947} className="w-auto h-auto"/>
+                        <Image src="/site1image2.png" alt="image1" loading="eager" width={1917} height={947} className="w-auto h-auto"/>
                     </div>
 
                     <div className="flex xl:p-10">
-                        <Image src="/site1image3.png" alt="image1" width={1917} height={947} className="w-auto h-auto"/>
+                        <Image src="/site1image3.png" alt="image1" loading="eager" width={1917} height={947} className="w-auto h-auto"/>
                     </div>
 
                     <div className="flex xl:p-10">
-                        <Image src="/site1image4.png" alt="image1" width={1917} height={947} className="w-auto h-auto"/>
+                        <Image src="/site1image4.png" alt="image1" loading="eager" width={1917} height={947} className="w-auto h-auto"/>
                     </div>
 
                 </div>

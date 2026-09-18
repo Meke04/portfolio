@@ -7,13 +7,13 @@ Portfólio pessoal desenvolvido com **Next.js, TypeScript e Tailwind CSS**, apre
 ### 1. Clone o repositório
 
 ```bash
-git clone URL_DO_REPOSITORIO
+git clone https://github.com/Meke04/portfolio
 ```
 
 ### 2. Entre na pasta
 
 ```bash
-cd nome-do-projeto
+cd portfolio
 ```
 
 ### 3. Instale as dependências

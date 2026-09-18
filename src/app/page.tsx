@@ -4,7 +4,7 @@ import { DiVisualstudio } from "react-icons/di";
 import { FaJava, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import { SiCss, SiDocker, SiGit, SiGithub, SiGmail, SiHtml5, SiIntellijidea, SiJavascript, SiMysql, SiNextdotjs, SiNodedotjs, SiPostgresql, SiReact, SiTailwindcss, SiTypescript } from "react-icons/si";
 import { SlSocialGithub, SlSocialInstagram, SlSocialLinkedin } from "react-icons/sl";
-import BoxLink from "./components/BoxLinks";
+import BoxLink from "../components/BoxLinks";
 
 export default function Home() {
   return (
@@ -176,7 +176,7 @@ export default function Home() {
 
           </Link>
 
-          <Link href="https://msflogistica.com.br/" target="_blank" rel="noopener noreferrer" className="relative rounded-2xl border border-gray-200 overflow-hidden">
+          <Link href="/msflogistica" target="_blank" rel="noopener noreferrer" className="relative rounded-2xl border border-gray-200 overflow-hidden">
 
             <div className="absolute -inset-full rounded-2xl bg-[conic-gradient(transparent_0deg,transparent_300deg,#22c55e_360deg)] animate-[spin_4s_linear_infinite] "/>
 
