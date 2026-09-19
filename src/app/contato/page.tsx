@@ -9,17 +9,22 @@ import { useState } from "react";
 
 export default function Contato() {
 
-    const [nome, setNome] = useState("");
-    const [sobreNome, setSobreNome] = useState("");
-    const [email, setEmail] = useState("");
-    const [telefone, setTelefone] = useState("");
-    const [assunto, setAssunto] = useState("");
-    const [mensagem, setMensagem] = useState("");
+    const [result, setResult] = useState("");
 
-    const EnviarMensagem = (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
+    const Enviar = async (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
 
-    }
+        const formData = new FormData(event.currentTarget);
+            formData.append("access_key", "184c4e83-7acc-4fa3-86f5-6ca16cc119f2");
+
+        const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData
+        });
+
+        const data = await response.json();
+        setResult(data.success ? "✓ Formulário enviado" : "Não foi possivel enviar");
+    };
 
     return(
         <div className="flex min-h-screen items-center justify-center text-white">
@@ -78,36 +83,36 @@ export default function Contato() {
                     </div>
                 </div>
 
-                <form onSubmit={EnviarMensagem} className="flex flex-col border border-gray-400 p-2 gap-4">
+                <form onSubmit={Enviar} className="flex flex-col border border-gray-400 p-2 gap-4">
                     <h1 className="flex text-3xl p-2 justify-center">Contate-me</h1>
                     <div className="flex gap-2">
                         <div className="flex flex-col">
                             <h1>Nome</h1>
-                            <input value={nome} onChange={(e) => setNome(e.target.value)} className="border border-gray-400 pl-1" placeholder="Nome:"/>
+                            <input name="nome" className="border border-gray-400 pl-1" placeholder="Nome:"/>
                         </div>
                         <div className="flex flex-col">
                             <h1>Sobre nome</h1>
-                            <input value={sobreNome} onChange={(e) => setSobreNome(e.target.value)} className="border border-gray-400 pl-1" placeholder="Sobre nome:"/>
+                            <input name="sobrenome" className="border border-gray-400 pl-1" placeholder="Sobre nome:"/>
                         </div>
                     </div>
 
                     <div className="flex gap-2">
                         <div className="flex flex-col">
                             <h1>Email</h1>
-                            <input value={email} onChange={(e) => setEmail(e.target.value)} className="border border-gray-400 pl-1" placeholder="Email:"/>
+                            <input name="email" className="border border-gray-400 pl-1" placeholder="Email:"/>
                         </div>
                         <div className="flex flex-col">
                             <h1>Telefone</h1>
-                            <input value={telefone} onChange={(e) => setTelefone(e.target.value)} className="border border-gray-400 pl-1" placeholder="Telefone:"/>
+                            <input name="numero" className="border border-gray-400 pl-1" placeholder="Telefone:"/>
                         </div>
                     </div>
 
                     <div className="flex gap-2">
                         <div className="flex flex-col">
                             <h1>Estado</h1>
-                            <select className="border border-gray-400">
+                            <select name="estado" className="border border-gray-400">
                                 {estados.map((estado) => (
-                                    <option key={estado.sigla} value={estado.sigla} className="bg-black">
+                                    <option key={estado.sigla} value={estado.nome} className="bg-black">
                                         {estado.nome}
                                     </option>
                                 ))}
@@ -118,18 +123,19 @@ export default function Contato() {
                     <div className="flex gap-2">
                         <div className="flex flex-col w-full">
                             <h1>Assunto</h1>
-                            <input value={assunto} onChange={(e) => setAssunto(e.target.value)} className="border border-gray-400 pl-1" placeholder="Assunto:"/>
+                            <input name="assunto" className="border border-gray-400 pl-1" placeholder="Assunto:"/>
                         </div>
                     </div>
 
                     <div className="flex gap-2">
                         <div className="flex flex-col w-full">
                             <h1>Mensagem</h1>
-                            <textarea value={mensagem} onChange={(e) => setMensagem(e.target.value)} className="resize-y border border-gray-400 pl-1" rows={3} placeholder="Mensagem:"/>
+                            <textarea name="mensagem" className="resize-y border border-gray-400 pl-1" rows={3} placeholder="Mensagem:"/>
                         </div>
                     </div>
-                    <div className="flex justify-center pb-1">
+                    <div className="flex flex-col items-center justify-center pb-1 gap-2">
                         <button type="submit" className="flex justify-center bg-blue-500 hover:bg-blue-700 border w-[90%] border-gray-400 rounded-lg p-2">Enviar</button>
+                        <h1 className="text-green-500 ">{result}</h1>
                     </div>
                 </form>
 
