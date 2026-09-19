@@ -18,6 +18,7 @@ export default function Hamburgue(){
                 {menu && (
                     <div className="fixed bottom-6 left-26 bg-black flex flex-col gap-2 p-2 border border-gray-400 rounded-2xl ">
                         <Link href="/" className="text-lg border-b border-gray-400 hover:text-purple-400">Início</Link>
+                        <Link href="/contato" className="text-lg border-b border-gray-400 hover:text-purple-400">Contato</Link>
                         <Link href="/enki" className="text-lg border-b border-gray-400 hover:text-purple-400">Enki</Link>
                         <Link href="/msflogistica" className="text-lg border-b border-gray-400 hover:text-purple-400">MSFLogistica</Link>
                         <Link href="/lista" className="text-lg border-b border-gray-400 hover:text-purple-400">Lista</Link>
