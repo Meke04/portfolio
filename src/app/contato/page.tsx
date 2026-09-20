@@ -6,6 +6,7 @@ import Image from "next/image";
 import { SiGmail } from "react-icons/si";
 import { FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import { useState } from "react";
+import ButtonReturn from "@/components/ButtonReturn";
 
 export default function Contato() {
 
@@ -27,23 +28,11 @@ export default function Contato() {
     };
 
     return(
-        <div className="flex min-h-screen items-center justify-center text-white">
+        <div className="flex min-h-screen items-center justify-center pb-20 md:pb-0 text-white">
 
-            <div className="fixed bottom-10 right-10 hover:-translate-y-1">
-                <Link href="/" className="relative block rounded-2xl border border-gray-200 overflow-hidden">
+            <ButtonReturn />
 
-                    <div className="absolute -inset-full rounded-2xl bg-[conic-gradient(transparent_0deg,transparent_300deg,#48D6C9_360deg)] animate-[spin_4s_linear_infinite] "/>
-
-                    <div className="absolute -inset-full rounded-2xl bg-[conic-gradient(from_180deg,transparent_0deg,transparent_300deg,#48D6C9_360deg)] animate-[spin_4s_linear_infinite] "/>
-
-                    <div className="flex flex-col relative m-0.5 p-2 rounded-2xl bg-black gap-3">
-                        ⟸ Voltar
-                    </div>
-
-                </Link>
-            </div>
-
-            <div className="flex border border-gray-400 rounded-2xl p-8">
+            <div className="flex flex-col md:flex-row gap-6 md:gap-0 border border-gray-400 rounded-2xl p-8">
 
                 <div className="flex flex-col w-full items-center pr-8">
                     <div className="flex">
@@ -85,7 +74,7 @@ export default function Contato() {
 
                 <form onSubmit={Enviar} className="flex flex-col border border-gray-400 p-2 gap-4">
                     <h1 className="flex text-3xl p-2 justify-center">Contate-me</h1>
-                    <div className="flex gap-2">
+                    <div className="flex flex-col md:flex-row gap-2">
                         <div className="flex flex-col">
                             <h1>Nome</h1>
                             <input name="nome" className="border border-gray-400 pl-1" placeholder="Nome:"/>
@@ -96,7 +85,7 @@ export default function Contato() {
                         </div>
                     </div>
 
-                    <div className="flex gap-2">
+                    <div className="flex flex-col md:flex-row gap-2">
                         <div className="flex flex-col">
                             <h1>Email</h1>
                             <input name="email" className="border border-gray-400 pl-1" placeholder="Email:"/>
@@ -107,7 +96,7 @@ export default function Contato() {
                         </div>
                     </div>
 
-                    <div className="flex gap-2">
+                    <div className="flex flex-col md:flex-row gap-2">
                         <div className="flex flex-col">
                             <h1>Estado</h1>
                             <select name="estado" className="border border-gray-400">
@@ -120,14 +109,14 @@ export default function Contato() {
                         </div>
                     </div>
 
-                    <div className="flex gap-2">
+                    <div className="flex flex-col md:flex-row gap-2">
                         <div className="flex flex-col w-full">
                             <h1>Assunto</h1>
                             <input name="assunto" className="border border-gray-400 pl-1" placeholder="Assunto:"/>
                         </div>
                     </div>
 
-                    <div className="flex gap-2">
+                    <div className="flex flex-col md:flex-row gap-2">
                         <div className="flex flex-col w-full">
                             <h1>Mensagem</h1>
                             <textarea name="mensagem" className="resize-y border border-gray-400 pl-1" rows={3} placeholder="Mensagem:"/>

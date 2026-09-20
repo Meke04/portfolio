@@ -1,3 +1,4 @@
+import ButtonReturn from "@/components/ButtonReturn";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -7,19 +8,7 @@ export default function enki() {
     return(
         <main className="flex bg-black text-white p-4 xl:p-8">
 
-            <div className="fixed bottom-10 right-10 hover:-translate-y-1">
-                <Link href="/" className="relative block rounded-2xl border border-gray-200 overflow-hidden">
-
-                    <div className="absolute -inset-full rounded-2xl bg-[conic-gradient(transparent_0deg,transparent_300deg,#48D6C9_360deg)] animate-[spin_4s_linear_infinite] "/>
-
-                    <div className="absolute -inset-full rounded-2xl bg-[conic-gradient(from_180deg,transparent_0deg,transparent_300deg,#48D6C9_360deg)] animate-[spin_4s_linear_infinite] "/>
-
-                    <div className="flex flex-col relative m-0.5 p-2 rounded-2xl bg-black gap-3">
-                        ⟸ Voltar
-                    </div>
-
-                </Link>
-            </div>
+            <ButtonReturn />
 
             <div className="flex flex-col-reverse xl:flex-row w-full">
                 <div className="flex flex-col w-full xl:w-1/2 gap-4">
